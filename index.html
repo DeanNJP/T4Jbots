@@ -3,63 +3,73 @@
 <head>
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <title>T4J Chatbots</title>
+  <title>Tech 4 Justice · Hear Me Out</title>
   <link rel="stylesheet" href="./style.css" />
 </head>
 <body>
+  <a class="skip-link" href="#main">Skip to main content</a>
+
   <div class="wrap">
-    <div class="nav">
-      <div class="left"><div class="badge">Tech 4 Justice</div></div>
-      <div class="left">
-        <a href="./index.html">Home</a>
-        <a href="./disability.html">Disability bot</a>
-        <a href="./racial.html">Racial bot</a>
-        <a href="./discrimination.html">Discrimination info</a>
-        <a href="./pathways.html">Complaint pathways</a>
-        <a href="./clinic.html">Clinic</a>
-        <a href="./about.html">About</a>
+    <header>
+      <nav class="nav" aria-label="Primary navigation">
+        <div class="brand">
+          <div class="badge">Hear Me Out · Tech 4 Justice</div>
+          <div class="tagline">Share | Hear | Change</div>
+        </div>
+
+        <div class="nav-links">
+          <a href="./index.html" aria-current="page">Home</a>
+          <a href="./disability.html">Disability assistant</a>
+          <a href="./racial.html">Racial assistant</a>
+          <a href="./discrimination.html">Discrimination info</a>
+          <a href="./pathways.html">Complaint pathways</a>
+          <a href="./clinic.html">Clinic</a>
+          <a href="./about.html">About</a>
+        </div>
+      </nav>
+    </header>
+
+    <main id="main">
+      <h1>Discrimination support tools</h1>
+      <p>Use the assistants to structure what happened. Use the guidance pages to understand evidence, pathways, and next steps.</p>
+
+      <div class="grid">
+        <section class="card" aria-label="Disability discrimination assistant">
+          <h2>Disability discrimination assistant</h2>
+          <p class="small">Guided questions to help describe what happened and what outcome you want.</p>
+          <a class="btn" href="./disability.html">Start now →</a>
+        </section>
+
+        <section class="card" aria-label="Racial discrimination assistant">
+          <h2>Racial discrimination assistant</h2>
+          <p class="small">This will be live once you add the Josef embed code.</p>
+          <a class="btn secondary" href="./racial.html">Open page →</a>
+        </section>
+
+        <section class="card" aria-label="Discrimination complaints information">
+          <h2>Discrimination complaints</h2>
+          <p class="small">What to write down, what evidence helps, and how to prepare.</p>
+          <a class="btn secondary" href="./discrimination.html">Read →</a>
+        </section>
+
+        <section class="card" aria-label="Complaint pathways">
+          <h2>Complaint pathways</h2>
+          <p class="small">A simple list you can expand over time (by issue type and pathway).</p>
+          <a class="btn secondary" href="./pathways.html">View pathways →</a>
+        </section>
+
+        <section class="card full" aria-label="Tech 4 Justice Clinic">
+          <h2>Tech 4 Justice Clinic</h2>
+          <p class="small">What it is, who it’s for, and how to get help.</p>
+          <a class="btn secondary" href="./clinic.html">Clinic page →</a>
+        </section>
       </div>
-    </div>
 
-    <h1>T4J bots + complaint guidance</h1>
-    <p>Use the bots to structure a discrimination complaint. Use the guidance pages to understand evidence, pathways, and next steps.</p>
-
-    <div class="grid">
-      <div class="card">
-        <h2>Disability discrimination chatbot</h2>
-        <p class="small">Guided questions to help describe what happened and what outcome you want.</p>
-        <a class="btn" href="./disability.html">Open bot →</a>
+      <hr />
+      <div class="notice small">
+        Accessibility note: this site supports keyboard navigation (Tab), visible focus outlines, and a “Skip to main content” link.
       </div>
-
-      <div class="card">
-        <h2>Racial discrimination chatbot</h2>
-        <p class="small">Placeholder until you add the Josef embed code.</p>
-        <a class="btn" href="./racial.html">Open bot →</a>
-      </div>
-
-      <div class="card">
-        <h2>Discrimination complaints</h2>
-        <p class="small">What to write down, what evidence helps, and how to prepare.</p>
-        <a class="btn" href="./discrimination.html">Read →</a>
-      </div>
-
-      <div class="card">
-        <h2>Complaint pathways</h2>
-        <p class="small">A simple list you can expand over time (by issue type and pathway).</p>
-        <a class="btn" href="./pathways.html">View pathways →</a>
-      </div>
-
-      <div class="card full">
-        <h2>Tech4Justice Clinic</h2>
-        <p class="small">Info for students and users: what it is, who it’s for, and how to get help.</p>
-        <a class="btn" href="./clinic.html">Clinic page →</a>
-      </div>
-    </div>
-
-    <hr />
-    <div class="notice small">
-      Tip: You can keep all of this free. You’re just editing HTML files in GitHub and GitHub publishes them.
-    </div>
+    </main>
   </div>
 </body>
 </html>
