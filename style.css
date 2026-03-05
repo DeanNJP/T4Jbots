@@ -1,29 +1,63 @@
+/* Optional: Arimo font (recommended by HMO style guide) */
+@import url('https://fonts.googleapis.com/css2?family=Arimo:wght@400;600;700&display=swap');
+
 :root{
-  --bg: #0b0c10;
-  --card: rgba(255,255,255,0.06);
-  --border: rgba(255,255,255,0.10);
-  --text: rgba(255,255,255,0.92);
-  --muted: rgba(255,255,255,0.70);
-  --btn: rgba(255,255,255,0.12);
-  --btnHover: rgba(255,255,255,0.18);
-  --accent: rgba(120, 119, 198, 0.55);
+  /* HMO palette (Style Guide) */
+  --lilac-50: #F0ECF5;
+  --lilac-300: #ABA3B5;
+  --orange-400: #FB7D59;
+  --orange-500: #FA5C30;
+  --black: #000000;
+  --white: #FFFFFF;
+
+  /* Accessible UI tokens */
+  --bg: var(--lilac-50);
+  --surface: var(--white);
+  --text: #111111;
+  --muted: #3B3B3B;        /* darker than typical “muted” for readability */
+  --border: rgba(0,0,0,0.14);
+
+  --focus: #0B57D0;        /* strong focus ring */
+  --shadow: 0 8px 24px rgba(0,0,0,0.10);
+
+  --radius: 18px;
+  --radius-sm: 12px;
 }
 
 *{ box-sizing:border-box; }
+
+html{ -webkit-text-size-adjust: 100%; }
 body{
   margin:0;
-  font-family: system-ui, -apple-system, Segoe UI, Roboto, Arial, sans-serif;
+  font-family: Arimo, system-ui, -apple-system, Segoe UI, Roboto, Arial, sans-serif;
   color: var(--text);
   background:
-    radial-gradient(1200px 600px at 20% -10%, var(--accent), transparent 60%),
-    radial-gradient(900px 500px at 90% 0%, rgba(80, 200, 170, 0.25), transparent 55%),
+    radial-gradient(900px 500px at 10% -10%, rgba(171,163,181,0.45), transparent 60%),
+    radial-gradient(900px 500px at 90% 0%, rgba(250,92,48,0.18), transparent 60%),
     var(--bg);
   min-height:100vh;
+  line-height: 1.55;
 }
 
 a{ color: inherit; }
 
-.wrap{ max-width: 1000px; margin: 0 auto; padding: 28px 18px 60px; }
+/* Skip link (keyboard accessibility) */
+.skip-link{
+  position:absolute;
+  left:-9999px;
+  top: 10px;
+  background: var(--surface);
+  padding: 10px 12px;
+  border-radius: var(--radius-sm);
+  border: 2px solid var(--focus);
+  box-shadow: var(--shadow);
+  z-index: 9999;
+}
+.skip-link:focus{ left: 10px; }
+
+.wrap{ max-width: 1040px; margin: 0 auto; padding: 24px 18px 56px; }
+
+header{ margin-bottom: 18px; }
 
 .nav{
   display:flex;
@@ -33,107 +67,118 @@ a{ color: inherit; }
   justify-content:space-between;
   padding: 12px 14px;
   border: 1px solid var(--border);
-  background: rgba(0,0,0,0.18);
-  border-radius: 16px;
-  backdrop-filter: blur(10px);
+  background: rgba(255,255,255,0.72);
+  border-radius: var(--radius);
+  backdrop-filter: blur(8px);
+  box-shadow: var(--shadow);
 }
 
-.nav .left{ display:flex; gap:10px; align-items:center; flex-wrap:wrap; }
-
+.brand{
+  display:flex;
+  flex-direction:column;
+  gap:4px;
+}
 .badge{
   font-size: 12px;
   letter-spacing:.12em;
   text-transform: uppercase;
+  color: #2A2A2A;
+}
+.tagline{
+  font-size: 13px;
   color: var(--muted);
 }
 
+.nav-links{
+  display:flex;
+  flex-wrap:wrap;
+  gap:10px;
+  align-items:center;
+}
+
+/* Links styled as buttons (large touch targets) */
 .nav a{
   text-decoration:none;
   border: 1px solid var(--border);
-  background: var(--btn);
-  padding: 8px 12px;
-  border-radius: 12px;
-  font-weight: 650;
+  background: var(--surface);
+  padding: 10px 12px;
+  border-radius: var(--radius-sm);
+  font-weight: 700;
   font-size: 13px;
 }
+.nav a:hover{ border-color: rgba(0,0,0,0.25); }
+.nav a:focus-visible{
+  outline: 3px solid var(--focus);
+  outline-offset: 2px;
+}
 
-.nav a:hover{ background: var(--btnHover); }
-
+/* Headings */
 h1{ margin: 18px 0 10px; font-size: 34px; line-height: 1.15; }
-h2{ margin: 18px 0 10px; font-size: 18px; }
-p{ margin: 0 0 12px; color: var(--muted); line-height: 1.55; }
+h2{ margin: 0 0 10px; font-size: 18px; }
+p{ margin: 0 0 12px; color: var(--muted); }
 
 .grid{ display:grid; grid-template-columns: repeat(12, 1fr); gap: 14px; margin-top: 18px; }
 
 .card{
   grid-column: span 6;
-  background: var(--card);
+  background: rgba(255,255,255,0.78);
   border: 1px solid var(--border);
-  border-radius: 18px;
+  border-radius: var(--radius);
   padding: 18px;
-  backdrop-filter: blur(10px);
-  box-shadow: 0 10px 30px rgba(0,0,0,0.25);
+  box-shadow: var(--shadow);
 }
-
 .card.full{ grid-column: span 12; }
 
-.small{ font-size: 13px; }
+.small{ font-size: 14px; }
 
 .btn{
   display:inline-flex;
   align-items:center;
   gap:10px;
-  padding: 10px 14px;
-  border-radius: 12px;
-  border: 1px solid var(--border);
-  background: var(--btn);
+  padding: 12px 14px;
+  border-radius: var(--radius-sm);
+  border: 2px solid rgba(0,0,0,0.12);
+  background: var(--orange-500);
+  color: var(--white);
   text-decoration:none;
-  font-weight: 750;
+  font-weight: 800;
+}
+.btn:hover{ filter: brightness(0.98); }
+.btn:focus-visible{
+  outline: 3px solid var(--focus);
+  outline-offset: 2px;
 }
 
-.btn:hover{ background: var(--btnHover); }
+/* Secondary button (for less primary actions) */
+.btn.secondary{
+  background: var(--surface);
+  color: var(--text);
+}
 
 hr{ border:0; border-top: 1px solid var(--border); margin: 18px 0; }
 
-.tableWrap{
-  overflow:auto;
-  border-radius: 14px;
-  border: 1px solid var(--border);
-  background: rgba(0,0,0,0.12);
-}
-
-table{ width:100%; border-collapse: collapse; min-width: 720px; }
-
-th, td{
-  padding: 12px;
-  border-bottom: 1px solid var(--border);
-  vertical-align: top;
-  text-align: left;
-}
-
-th{ color: var(--text); font-size: 13px; }
-td{ color: var(--muted); font-size: 13px; }
-
 .notice{
   border: 1px solid var(--border);
-  background: rgba(255,255,255,0.05);
+  background: rgba(255,255,255,0.72);
   padding: 12px 14px;
-  border-radius: 14px;
+  border-radius: var(--radius);
   color: var(--muted);
 }
 
 .frame{
   width: 100%;
-  border: 0;
-  min-height: 82vh;
-  border-radius: 14px;
-  overflow:hidden;
-  background: rgba(0,0,0,0.18);
   border: 1px solid var(--border);
+  min-height: 82vh;
+  border-radius: var(--radius);
+  background: rgba(255,255,255,0.72);
+}
+
+/* Respect reduced motion preferences */
+@media (prefers-reduced-motion: reduce){
+  *{ scroll-behavior: auto !important; }
 }
 
 @media (max-width: 820px){
   h1{ font-size: 28px; }
   .card{ grid-column: span 12; }
-  table{ min-width: 620px; }
 }
