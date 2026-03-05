@@ -3,66 +3,81 @@
 <head>
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <title>Tech4Justice Clinic</title>
+  <title>Tech 4 Justice Clinic · Hear Me Out</title>
   <link rel="stylesheet" href="./style.css" />
 </head>
 <body>
+  <a class="skip-link" href="#main">Skip to main content</a>
+
   <div class="wrap">
-    <div class="nav">
-      <div class="left"><div class="badge">Tech 4 Justice</div></div>
-      <div class="left">
-        <a href="./index.html">Home</a>
-        <a href="./disability.html">Disability bot</a>
-        <a href="./racial.html">Racial bot</a>
-        <a href="./discrimination.html">Discrimination info</a>
-        <a href="./pathways.html">Complaint pathways</a>
-        <a href="./clinic.html">Clinic</a>
-        <a href="./about.html">About</a>
-      </div>
-    </div>
+    <header>
+      <nav class="nav" aria-label="Primary navigation">
+        <div class="brand">
+          <div class="badge">Hear Me Out · Tech 4 Justice</div>
+          <div class="tagline">Share | Hear | Change</div>
+        </div>
 
-    <h1>Tech4Justice Clinic</h1>
-    <p>Edit this page to match how the clinic actually operates (intake, eligibility, supervision, referral options).</p>
+        <div class="nav-links">
+          <a href="./index.html">Home</a>
+          <a href="./disability.html">Disability assistant</a>
+          <a href="./racial.html">Racial assistant</a>
+          <a href="./discrimination.html">Discrimination info</a>
+          <a href="./pathways.html">Complaint pathways</a>
+          <a href="./clinic.html" aria-current="page">Clinic</a>
+          <a href="./about.html">About</a>
+        </div>
+      </nav>
+    </header>
 
-    <div class="grid">
-      <div class="card">
-        <h2>What the clinic does</h2>
-        <p class="small">
-          • Helps people clarify what happened<br />
-          • Helps map possible complaint pathways<br />
-          • Helps turn notes into a clearer complaint draft<br />
-          • Explains what to expect after lodging
-        </p>
-      </div>
+    <main id="main">
+      <h1>Tech 4 Justice Clinic</h1>
+      <p>This page explains what the clinic is and how people can access support.</p>
 
-      <div class="card">
-        <h2>Who it’s for</h2>
-        <p class="small">
-          People dealing with discrimination issues who want help navigating options and next steps.
-        </p>
-      </div>
+      <div class="grid">
+        <section class="card" aria-label="What the clinic does">
+          <h2>What the clinic does</h2>
+          <p class="small">
+            • Helps people clarify what happened<br />
+            • Helps identify likely complaint pathways<br />
+            • Helps turn notes into a clear complaint summary<br />
+            • Explains what to expect after lodging
+          </p>
+        </section>
 
-      <div class="card full">
-        <h2>How to access the clinic</h2>
-        <p class="small">
-          Replace this with your real intake method.<br /><br />
-          Example:<br />
-          • Email: <code>PASTE_EMAIL_HERE</code><br />
-          • Or an intake form link<br />
-          • Or “Ask a student at the clinic session”
-        </p>
-      </div>
+        <section class="card" aria-label="Who it’s for">
+          <h2>Who it’s for</h2>
+          <p class="small">
+            People experiencing discrimination who want help understanding options and next steps.
+          </p>
+        </section>
 
-      <div class="card">
-        <h2>For students</h2>
-        <p class="small">Add information about the clinic model, learning objectives, and workflow.</p>
-      </div>
+        <section class="card full" aria-label="How to access the clinic">
+          <h2>How to access the clinic</h2>
+          <p class="small">
+            Replace this section with your real intake method:<br /><br />
+            • Email: <code>PASTE_EMAIL_HERE</code><br />
+            • Or intake form link<br />
+            • Or referral process (if applicable)
+          </p>
+        </section>
 
-      <div class="card">
-        <h2>For users</h2>
-        <p class="small">Add what to bring (timeline, documents) and what support is available.</p>
+        <section class="card" aria-label="What to bring">
+          <h2>What to bring</h2>
+          <p class="small">
+            • A short timeline<br />
+            • Key documents (emails, letters, screenshots)<br />
+            • Your preferred outcome
+          </p>
+        </section>
+
+        <section class="card" aria-label="If you need urgent support">
+          <h2>If you need urgent support</h2>
+          <p class="small">
+            If you feel unsafe or at risk, prioritise immediate support and emergency services in your area.
+          </p>
+        </section>
       </div>
-    </div>
+    </main>
   </div>
 </body>
 </html>
