@@ -3,75 +3,87 @@
 <head>
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <title>Discrimination complaints</title>
+  <title>Discrimination complaints · Tech 4 Justice</title>
   <link rel="stylesheet" href="./style.css" />
 </head>
 <body>
+  <a class="skip-link" href="#main">Skip to main content</a>
+
   <div class="wrap">
-    <div class="nav">
-      <div class="left"><div class="badge">Tech 4 Justice</div></div>
-      <div class="left">
-        <a href="./index.html">Home</a>
-        <a href="./disability.html">Disability bot</a>
-        <a href="./racial.html">Racial bot</a>
-        <a href="./discrimination.html">Discrimination info</a>
-        <a href="./pathways.html">Complaint pathways</a>
-        <a href="./clinic.html">Clinic</a>
-        <a href="./about.html">About</a>
-      </div>
-    </div>
+    <header>
+      <nav class="nav" aria-label="Primary navigation">
+        <div class="brand">
+          <div class="badge">Hear Me Out · Tech 4 Justice</div>
+          <div class="tagline">Share | Hear | Change</div>
+        </div>
 
-    <h1>Discrimination complaints</h1>
-    <p>This page is written to be edited over time. Keep it short, practical, and plain-English.</p>
+        <div class="nav-links">
+          <a href="./index.html">Home</a>
+          <a href="./disability.html">Disability assistant</a>
+          <a href="./racial.html">Racial assistant</a>
+          <a href="./discrimination.html" aria-current="page">Discrimination info</a>
+          <a href="./pathways.html">Complaint pathways</a>
+          <a href="./clinic.html">Clinic</a>
+          <a href="./about.html">About</a>
+        </div>
+      </nav>
+    </header>
 
-    <div class="grid">
-      <div class="card">
-        <h2>What to write down</h2>
-        <p class="small">
-          • What happened (step-by-step)<br />
-          • Dates, times, and locations<br />
-          • Who was involved (roles if you prefer)<br />
-          • What was said / done that felt discriminatory<br />
-          • What harm it caused (financial, emotional, safety, exclusion)<br />
-          • What outcome you want (apology, change, compensation, job outcome)
-        </p>
-      </div>
+    <main id="main">
+      <h1>Discrimination complaints</h1>
+      <p>This page is a practical checklist. Keep it short. Make it easy to scan.</p>
 
-      <div class="card">
-        <h2>Evidence that helps</h2>
-        <p class="small">
-          • Emails / messages / letters<br />
-          • Screenshots, photos, recordings (if lawful)<br />
-          • Policies and forms you were given<br />
-          • Medical evidence (if relevant)<br />
-          • Witness notes (even informal)<br />
-          • A simple timeline
-        </p>
-      </div>
+      <div class="grid">
+        <section class="card" aria-label="What to write down">
+          <h2>What to write down</h2>
+          <p class="small">
+            • What happened (in order)<br />
+            • Dates, times, and locations<br />
+            • Who was involved (roles if you prefer)<br />
+            • What was said/done that felt discriminatory<br />
+            • What harm it caused (financial, emotional, safety, exclusion)<br />
+            • What outcome you want (apology, change, compensation, work/school outcome)
+          </p>
+        </section>
 
-      <div class="card full">
-        <h2>Drafting tips</h2>
-        <p class="small">
-          • Be specific: quote key phrases if you can.<br />
-          • Avoid long backstory. Focus on what happened + why it matters.<br />
-          • State the outcome you want in one sentence near the top.<br />
-          • Keep copies of everything you send.
-        </p>
-        <a class="btn" href="./pathways.html">Go to pathways →</a>
-      </div>
+        <section class="card" aria-label="Evidence that helps">
+          <h2>Evidence that helps</h2>
+          <p class="small">
+            • Emails / texts / messages<br />
+            • Screenshots and photos<br />
+            • Letters or decision notices<br />
+            • Policies or guidelines you were given<br />
+            • Medical evidence (if relevant)<br />
+            • Witness notes (even informal)<br />
+            • A simple timeline
+          </p>
+        </section>
 
-      <div class="card">
-        <h2>Use a bot</h2>
-        <p class="small">If you’re not sure how to start, the bots can help structure your story.</p>
-        <a class="btn" href="./disability.html">Disability bot →</a>
-      </div>
+        <section class="card full" aria-label="Drafting tips">
+          <h2>Drafting tips</h2>
+          <p class="small">
+            • Put the outcome you want near the top.<br />
+            • Use short paragraphs and headings.<br />
+            • Include key quotes (if you can).<br />
+            • Stick to the facts. Avoid long backstory.<br />
+            • Keep copies of everything you send.
+          </p>
+          <a class="btn secondary" href="./pathways.html">Go to pathways →</a>
+        </section>
 
-      <div class="card">
-        <h2>Get clinic help</h2>
-        <p class="small">If you get stuck or bounced between bodies, the clinic can help map next steps.</p>
-        <a class="btn" href="./clinic.html">Clinic →</a>
+        <section class="card" aria-label="Use the assistants">
+          <h2>Use the assistants</h2>
+          <p class="small">If you’re not sure how to start, begin with a guided assistant.</p>
+          <a class="btn" href="./disability.html">Start with disability assistant →</a>
+        </section>
+
+        <section class="card" aria-label="Clinic help">
+          <h2>Clinic help</h2>
+          <p class="small">If you’re stuck or being bounced around, the clinic can help map next steps.</p>
+          <a class="btn secondary" href="./clinic.html">Clinic page →</a>
+        </section>
       </div>
-    </div>
+    </main>
   </div>
 </body>
 </html>
